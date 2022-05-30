@@ -14,7 +14,7 @@ export default _ =>
 
         <div className="Cards">
 
-            <Card titulo='#05 - Número Aleatório'>
+            <Card titulo='#05 - Número Aleatório' color='#080'>
                 <Aleatorio
                     max={20}
                     min={5}
