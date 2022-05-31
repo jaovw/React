@@ -1,13 +1,20 @@
-import React from "react";
-import FamiliaMembro from "./FamiliaMembro";
+import React, { cloneElement } from "react";
 
 export default props => {
     return (
-            //  UTILIZANDO O SPREAD OPERATOR PARA PEGAR TODAS AS PROPS (PARAMETROS)
+            
         <div>
-            <FamiliaMembro nome='Pedro' sobrenome={props.sobrenome}/>
-            <FamiliaMembro nome='Ana' {...props}/>
-            <FamiliaMembro nome='Gustavo' sobrenome='Silva'/>
+            {/* {React.cloneElement(props.children,{ ...props })} CASO SEJA APENAS UM ELEMENTO*/}
+            {
+                React.Children.map(props.children, el =>{
+                    return cloneElement(el,props)
+                })
+            }
+            {/* DE FORMA RESUMIDA POREM CORRIGINDO ERRO DE KEY
+                props.children.map((child,i) => {
+                    return cloneElement(child, { ...props, key: i })
+                })
+            */}
         </div>
     )
 }
