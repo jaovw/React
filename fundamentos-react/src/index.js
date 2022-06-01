@@ -1,11 +1,12 @@
 import './index.css'
-import ReactDOM from 'react-dom'
+// import ReactDOM from 'react-dom' // NOT LONGER SUPPORTED
+import {createRoot} from 'react-dom/client'
 import React from 'react'
 import App from './App'
 
-const el = document.getElementById('root')
+const rootElement = document.getElementById('root')
+const root = createRoot(rootElement)
 
- ReactDOM.render( 
-    <App/>,
-    el
- )
+root.render(
+   <App />
+)
