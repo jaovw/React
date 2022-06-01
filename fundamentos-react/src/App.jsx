@@ -18,7 +18,7 @@ export default _ =>
         <h1>Fundamentos React</h1>
 
         <div className="Cards">
-            <Card titulo='#08 - Lista de produtos' color='#a024ff'>
+            <Card titulo='#08 - Tabela de produtos' color='#a024ff'>
                 <TabelaProdutos/>
             </Card>
 
