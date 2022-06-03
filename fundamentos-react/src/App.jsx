@@ -20,71 +20,62 @@ import Input from "./components/formulario/Input";
 
 import Contador from "./components/contador/Contador"
 
+import Mega from "./components/mega/Mega"
+
 export default _ =>
     <div className="App">
         <h1>Fundamentos React</h1>
 
         <div className="Cards">
+            <Card titulo='#15 - Mega' color='#2424ff'>
+                <Mega
+                    numero={9}
+                />
+            </Card>
+
             <Card titulo='#14 - Contador' color='#dec8ab'>
                 <Contador
-                    // numeroInicial = {} 
+                // numeroInicial = {} 
                 />
             </Card>
-        </div>
 
-        <div className="Cards">
             <Card titulo='#13 - Conponente controlado (Input)' color='#ff42a1'>
-                <Input/>
+                <Input />
             </Card>
-        </div>
 
-        <div className="Cards">
             <Card titulo='#12 - Comunicação indireta' color='#005700'>
-                <IndiretaPai/>
+                <IndiretaPai />
             </Card>
-        </div>
 
-        <div className="Cards">
             <Card titulo='#11 - Comunicação direta' color='#651a1a'>
                 <DiretaPai
-                
+
                 />
             </Card>
-        </div>
-        
-        <div className="Cards">
+
             <Card titulo='#10 - Condicional' color='#575700'>
                 <UsuarioInfo
-                usuario={{nome: 'João'}}
+                    usuario={{ nome: 'João' }}
                 />
                 <UsuarioInfo
-                usuario={{email: 'jo@ao.com'}}
+                    usuario={{ email: 'jo@ao.com' }}
                 />
             </Card>
-        </div>
 
-        <div className="Cards">
             <Card titulo='#09 - Renderização condicional' color='#005757'>
-                <ParOuImpar 
+                <ParOuImpar
                     numero={5}
                 />
             </Card>
 
-        </div>
-
-        <div className="Cards">
             <Card titulo='#08 - Tabela de produtos' color='#a024ff'>
-                <TabelaProdutos/>
+                <TabelaProdutos />
             </Card>
 
-        </div>
-        <div className="Cards">
             <Card titulo='#07 - Repetição' color='#00adad'>
-                <ListaAlunos/>
+                <ListaAlunos />
             </Card>
 
-        </div>
-        <div className="Cards">
             <Card titulo='#06 - Componentes com filhos' color='#adad00'>
                 <Familia sobrenome='Santos'>
                     <FamiliaMembro nome='Pedro' />
